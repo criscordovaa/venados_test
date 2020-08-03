@@ -1,12 +1,16 @@
 import React from 'react';
 import {makeStyles} from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
-import Container from '@material-ui/core/Container'
+import {Switch, Route} from "react-router-dom";
 
 
-import Button from '@material-ui/core/Button'
 import {hot} from 'react-hot-loader'
 import Navigation from 'components/Navigation';
+import HomePage from 'components/Home';
+import PlayersPage from "components/Players";
+import BookmarksPage from 'components/Bookmarks';
+import SponsorsPage from 'components/Sponsors';
+
 
 import './app.scss';
 
@@ -33,8 +37,32 @@ const App: React.FC = () => {
             <Navigation/>
             <main className={classes.content}>
                 <div className={classes.appBarSpacer} />
-                <Container>
-                </Container>
+                <Switch>
+                    <Route
+                        exact
+                        path={'/'}
+                        component={HomePage}
+                        key={'home'}
+                    />
+                    <Route
+                        exact
+                        path={'/bookmarks'}
+                        component={BookmarksPage}
+                        key={'bookmark'}
+                    />
+                    <Route
+                        exact
+                        path={'/players'}
+                        component={PlayersPage}
+                        key={'player'}
+                    />
+                    <Route
+                        exact
+                        path={'/sponsors'}
+                        component={SponsorsPage}
+                        key={'sponsor'}
+                    />
+                </Switch>
             </main>
         </div>
     );

@@ -17,12 +17,14 @@ const NavigationItems: React.FC<{items: Array<INavigationItem>}>= ({items}) => {
             <List>
                 {
                     items.map(({route, routeName, Icon}, key) =>(
-                        <ListItem key={key}>
-                            <ListItemIcon>
-                                <Icon/>
-                            </ListItemIcon>
-                            <ListItemText primary={routeName}/>
-                        </ListItem>
+                        <Link to={route} key={key}>
+                            <ListItem>
+                                <ListItemIcon>
+                                    <Icon/>
+                                </ListItemIcon>
+                                <ListItemText className={'route-link'} primary={routeName}/>
+                            </ListItem>
+                        </Link>
                     ))
                 }
             </List>

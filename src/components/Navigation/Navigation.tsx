@@ -75,8 +75,8 @@ const NavigationBar: React.FC = () => {
                 <NavigationCart/>
                 <NavigationItems items={[
                     {route: "/", routeName: "Inicio", Icon: Home},
-                    {route: "/jugadores", routeName: "Jugadores", Icon: Group},
-                    {route: "/marcadores", routeName: "Marcadores", Icon: Equalizer},
+                    {route: "/players", routeName: "Jugadores", Icon: Group},
+                    {route: "/bookmarks", routeName: "Marcadores", Icon: Equalizer},
                     {route: "/sponsors", routeName: "Sponsors", Icon: SportsSoccer}
                 ]}/>
             </SwipeableDrawer>
