@@ -1,0 +1,30 @@
+body{
+  margin: auto;
+}
+header{
+  box-shadow: none !important;
+}
+
+.MuiDrawer-paperAnchorLeft{
+  width: 300px;
+}
+
+.logo-container{
+  position: absolute;
+  z-index: 1;
+  top: 8%;
+  left: 5%;
+  width: 150px;
+}
+
+.venados-logo{
+  width: 80px;
+}
+
+.logo-title{
+  color: #fff;
+  margin-left: 6%;
+  margin-top: 0;
+  text-shadow: 1px 0 0 #000000, -2px 0 0 #000000, 0 1px 0 #000000, 0 -2px 0 #000000, 0px 1px #fff, 1px -1px 0 #fff,
+  0px -1px 0 #fff, -1px 0px 0 #fff;
+}
