@@ -2,7 +2,7 @@ import * as path from 'path';
 import webpack, {Configuration} from "webpack";
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import {CleanWebpackPlugin} from "clean-webpack-plugin";
-
+import DotEnv from 'dotenv-webpack'
 
 const webpackConfig = (): Configuration => ({
     entry: './src/index.tsx',
@@ -73,6 +73,10 @@ const webpackConfig = (): Configuration => ({
         new HtmlWebpackPlugin({
             template: './public/index.html',
             favicon: './public/favicon.ico'
+        }),
+        new DotEnv({
+            path: './.env.development',
+            safe: true
         })
     ]
 });
