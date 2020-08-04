@@ -8,6 +8,15 @@ import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
 import NavigationItems from './NavigationItems'
 import NavigationCart from './NavigationCart';
 import {Group, SportsSoccer, Equalizer, Home} from '@material-ui/icons';
+import {NavigationProvider} from './hooks/NavigationContext';
+
+//All Items for navigation
+export const navItems = [
+    {route: "/", routeName: "Inicio", Icon: Home},
+    {route: "/players", routeName: "Jugadores", Icon: Group},
+    {route: "/bookmarks", routeName: "Marcadores", Icon: Equalizer},
+    {route: "/sponsors", routeName: "Sponsors", Icon: SportsSoccer}
+];
 
 const navBarStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -73,12 +82,9 @@ const NavigationBar: React.FC = () => {
                 onClose={toggleNav(false)}
             >
                 <NavigationCart/>
-                <NavigationItems items={[
-                    {route: "/", routeName: "Inicio", Icon: Home},
-                    {route: "/players", routeName: "Jugadores", Icon: Group},
-                    {route: "/bookmarks", routeName: "Marcadores", Icon: Equalizer},
-                    {route: "/sponsors", routeName: "Sponsors", Icon: SportsSoccer}
-                ]}/>
+                <NavigationProvider value={{itemsNavigation: navItems, fnToggleNav: toggleNav}}>
+                    <NavigationItems/>
+                </NavigationProvider>
             </SwipeableDrawer>
         </React.Fragment>
     );

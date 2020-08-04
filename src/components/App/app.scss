@@ -29,6 +29,18 @@ header{
   0px -1px 0 #fff, -1px 0px 0 #fff;
 }
 
-.route-link span{
+.route-link{
   text-decoration: none;
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.route-link span{
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.home-logo{
+  display: block;
+  margin-left: auto;
+  margin-right: auto
 }
