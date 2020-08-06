@@ -2,14 +2,15 @@ import * as path from 'path';
 import webpack, {Configuration} from "webpack";
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import {CleanWebpackPlugin} from "clean-webpack-plugin";
-
+import DotEnv from 'dotenv-webpack'
 
 const webpackConfig = (): Configuration => ({
     entry: './src/index.tsx',
     resolve: {
         extensions: ['.ts', '.tsx', '.js'],
         alias: {
-            components: path.resolve(__dirname, "./src/components/")
+            components: path.resolve(__dirname, "./src/components/"),
+            utils: path.resolve(__dirname, "./src/utils/")
         }
     },
     output: {
@@ -28,11 +29,11 @@ const webpackConfig = (): Configuration => ({
             },
             {
                 test: /\.css$/i,
-                use: ['style-loader', 'css-loader', 'sass-loader']
+                use: ['style-loader', 'css-loader']
             },
             {
                 test: /\.s[ac]ss$/i,
-                use: ['style-loader', 'css-loader']
+                use: ['style-loader', 'css-loader', 'sass-loader']
             },
             {
                 test: /\.(jpe?g|png|gif|svg)$/i,
@@ -55,6 +56,7 @@ const webpackConfig = (): Configuration => ({
         port: 3000,
         hot: true,
         overlay: true,
+        historyApiFallback: true,
         stats: {
             assets: false,
             children: false,
@@ -73,6 +75,10 @@ const webpackConfig = (): Configuration => ({
         new HtmlWebpackPlugin({
             template: './public/index.html',
             favicon: './public/favicon.ico'
+        }),
+        new DotEnv({
+            path: './.env.development',
+            safe: true
         })
     ]
 });

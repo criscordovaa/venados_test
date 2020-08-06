@@ -28,3 +28,13 @@ header{
   text-shadow: 1px 0 0 #000000, -2px 0 0 #000000, 0 1px 0 #000000, 0 -2px 0 #000000, 0px 1px #fff, 1px -1px 0 #fff,
   0px -1px 0 #fff, -1px 0px 0 #fff;
 }
+
+.route-link{
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.route-link span{
+  font-weight: bold;
+  font-size: 18px;
+}
