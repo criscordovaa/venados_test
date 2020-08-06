@@ -1,8 +1,6 @@
 import React from 'react';
 import {INavigationItem} from '../NavigationItems'
 
-type ToggleNav = () => any;
-
 export interface INavigationContext {
     itemsNavigation:Array<INavigationItem>,
     fnToggleNav: Function

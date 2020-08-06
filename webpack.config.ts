@@ -29,11 +29,11 @@ const webpackConfig = (): Configuration => ({
             },
             {
                 test: /\.css$/i,
-                use: ['style-loader', 'css-loader', 'sass-loader']
+                use: ['style-loader', 'css-loader']
             },
             {
                 test: /\.s[ac]ss$/i,
-                use: ['style-loader', 'css-loader']
+                use: ['style-loader', 'css-loader', 'sass-loader']
             },
             {
                 test: /\.(jpe?g|png|gif|svg)$/i,
