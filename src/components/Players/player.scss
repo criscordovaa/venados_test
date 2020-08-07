@@ -1,0 +1,195 @@
+div.player-container {
+  display: -webkit-box;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  justify-content: space-around;
+  div.player-card {
+    justify-items: center;
+    display: grid;
+    flex: 1 0 30%;
+    margin: 15px 5px 5px 5px;
+    height: auto;
+    div.image-container {
+      cursor: pointer;
+      margin-bottom: 5%;
+      width: 100px;
+      height: 100px;
+      position: relative;
+      overflow: hidden;
+      border-radius: 50%;
+      box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.81);
+    }
+    img {
+      display: inline;
+      margin: 10px auto 10px 8%;
+      height: 100%;
+      width: auto;
+    }
+    span {
+      text-align: center;
+    }
+    .position {
+      font-weight: bold;
+    }
+    span.skeleton {
+      width: 100%;
+    }
+  }
+}
+
+/*PLayer modal*/
+/*
+.modal-player {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-player-paper {
+  position: relative;
+  width: 75%;
+  box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 5px 8px 0px rgba(0, 0, 0, 0.14), 0px 1px 14px 0px rgba(0, 0, 0, 0.12);
+  background-color: #fff;
+  .modal-player-header > div.group, .modal-player-body {
+    padding: 16px 32px 24px;
+  }
+
+  div.modal-player-header {
+    background: #649213 url('../../assets/noise.png');
+    div.group {
+      justify-items: center;
+      display: grid;
+      .review-info{
+        display: grid;
+        span{
+          text-align: center;
+        }
+      }
+      .review{
+        text-transform: uppercase;
+        margin-bottom: 5%;
+      }
+    }
+    div.image-container {
+      background: #fff;
+      margin-bottom: 5%;
+      width: 100px;
+      height: 100px;
+      position: relative;
+      overflow: hidden;
+      border-radius: 50%;
+      border: 10px black;
+    }
+    img {
+      display: inline;
+      margin: 10px auto 10px 8%;
+      height: 100%;
+      width: auto;
+    }
+  }
+
+  div.modal-player-body {
+    div.info {
+      display: grid;
+      justify-items: center;
+      padding: 9px 0 9px 0;
+      .title{
+        text-transform: uppercase;
+      }
+      .value{
+        font-size: 12px;
+      }
+    }
+  }
+  span.close-modal{
+    position: absolute;
+    right: -20px;
+    top: -20px;
+
+  }
+}*/
+
+.modal-player {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: auto;
+  box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 5px 8px 0px rgba(0, 0, 0, 0.14), 0px 1px 14px 0px rgba(0, 0, 0, 0.12);
+  .modal-player-header > div.group, .modal-player-body {
+    padding: 16px 32px 24px;
+  }
+
+  div.modal-player-header {
+    background: #649213 url('../../assets/noise.png');
+    div.group {
+      justify-items: center;
+      display: grid;
+      .review-info {
+        justify-items: center;
+        display: grid;
+        span {
+          text-align: center;
+        }
+        span.position {
+          font-size: 15px;
+        }
+      }
+      .review {
+        text-transform: uppercase;
+        margin-bottom: 5%;
+      }
+    }
+    div.image-container {
+      background: #fff;
+      margin-bottom: 5%;
+      width: 100px;
+      height: 100px;
+      position: relative;
+      overflow: hidden;
+      border-radius: 50%;
+      border: 10px black;
+    }
+    img {
+      display: inline;
+      margin: 10px auto 10px 8%;
+      height: 100%;
+      width: auto;
+    }
+  }
+  button.close-modal {
+    position: absolute;
+    right: 0;
+    top: 0;
+
+  }
+  div.MuiDialog-paperScrollPaper {
+    width: 85vw;
+  }
+  @media (orientation: landscape) {
+    div.MuiDialog-paperScrollPaper {
+      flex-direction: row;
+    }
+  }
+
+  @media (orientation: portrait) {
+    div.MuiDialog-paperScrollPaper {
+      flex-direction: column;
+    }
+  }
+
+  div.modal-player-body {
+    div.info {
+      display: grid;
+      justify-items: center;
+      padding: 9px 0 9px 0;
+      .title {
+        text-transform: uppercase;
+      }
+      .value {
+        font-size: 12px;
+      }
+    }
+  }
+
+}

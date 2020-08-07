@@ -28,3 +28,5 @@ export const getStringMonth = (date: Date) => {
 export const getDay = (date: Date) => moment(date).format("D");
 
 export const getDayWeekName = (date: Date) => moment(date).format("ddd").toString().toUpperCase();
+
+export const getDateFormatted = (date: Date) => moment(date).format("DD/MM/YYYY").toString();
