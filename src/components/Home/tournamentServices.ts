@@ -1,4 +1,3 @@
-import navigationContext from 'components/Navigation/hooks/NavigationContext';
 import Request from 'utils/api';
 import {AxiosError, AxiosResponse} from "axios";
 

@@ -1,0 +1,49 @@
+div.table {
+  div.table-row {
+    display: flex;
+    div:first-child {
+      flex: 15;
+    }
+    div:not(:first-child) {
+      flex: 2;
+    }
+  }
+  .table-header {
+    .table-th {
+      justify-content: start;
+      color: #fff;
+      font-size: 15px;
+      font-weight: bolder;
+    }
+    background: #828480;
+    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.81);
+    padding: 8px 10px 8px 10px;
+  }
+
+  .table-body {
+    .table-row{
+      padding: 10px 0 10px 0;
+    }
+    padding: 15px 10px 15px 10px;
+    background: #649213 url('../../assets/noise.png');
+    .table-data {
+      font-size: 18px;
+      font-weight: bolder;
+      color: #fff;
+    }
+    .table-data:not(:first-child) {
+      display: grid;
+      align-content: center;
+    }
+    div.general-content{
+      align-items: center;
+      display: inline-flex;
+      flex-wrap: nowrap;
+      gap: 12px;
+
+      img {
+        width: 50px;
+      }
+    }
+  }
+}

@@ -14,7 +14,7 @@ import {NavigationProvider} from './hooks/NavigationContext';
 export const navItems = [
     {route: "/", routeName: "Inicio", Icon: Home},
     {route: "/players", routeName: "Jugadores", Icon: Group},
-    {route: "/bookmarks", routeName: "Marcadores", Icon: Equalizer},
+    {route: "/bookmarks", routeName: "Estadisticas", Icon: Equalizer},
     {route: "/sponsors", routeName: "Sponsors", Icon: SportsSoccer}
 ];
 
