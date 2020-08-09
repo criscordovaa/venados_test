@@ -38,3 +38,9 @@ header{
   font-weight: bold;
   font-size: 18px;
 }
+
+main.content-application{
+  flex-grow: 1;
+  height: 100vh;
+  overflow: auto;
+}

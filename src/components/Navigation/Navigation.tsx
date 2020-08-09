@@ -7,15 +7,14 @@ import MenuIcon from '@material-ui/icons/Menu';
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
 import NavigationItems from './NavigationItems'
 import NavigationCart from './NavigationCart';
-import {Group, SportsSoccer, Equalizer, Home} from '@material-ui/icons';
+import {Group, Equalizer, Home} from '@material-ui/icons';
 import {NavigationProvider} from './hooks/NavigationContext';
 
 //All Items for navigation
 export const navItems = [
     {route: "/", routeName: "Inicio", Icon: Home},
     {route: "/players", routeName: "Jugadores", Icon: Group},
-    {route: "/bookmarks", routeName: "Estadisticas", Icon: Equalizer},
-    {route: "/sponsors", routeName: "Sponsors", Icon: SportsSoccer}
+    {route: "/bookmarks", routeName: "Estadisticas", Icon: Equalizer}
 ];
 
 const navBarStyles = makeStyles((theme: Theme) =>
@@ -39,19 +38,9 @@ const navBarStyles = makeStyles((theme: Theme) =>
     })
 );
 
-const drawerStyles = makeStyles({
-    list: {
-        width: 250
-    },
-    fullList: {
-        width: 'auto'
-    }
-});
-
 const NavigationBar: React.FC = () => {
     const [isOpen, toggleOpen] = useState(false);
     const classes = navBarStyles();
-    const classDrawer = drawerStyles();
     const toggleNav = (open: boolean) => (event: React.KeyboardEvent | React.MouseEvent) => {
         if (
             event && event.type === 'keydown' &&

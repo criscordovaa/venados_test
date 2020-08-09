@@ -10,6 +10,7 @@ div.player-container {
     margin: 15px 5px 5px 5px;
     height: auto;
     div.image-container {
+      background: #fff;
       cursor: pointer;
       margin-bottom: 5%;
       width: 100px;
@@ -38,77 +39,6 @@ div.player-container {
 }
 
 /*PLayer modal*/
-/*
-.modal-player {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.modal-player-paper {
-  position: relative;
-  width: 75%;
-  box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 5px 8px 0px rgba(0, 0, 0, 0.14), 0px 1px 14px 0px rgba(0, 0, 0, 0.12);
-  background-color: #fff;
-  .modal-player-header > div.group, .modal-player-body {
-    padding: 16px 32px 24px;
-  }
-
-  div.modal-player-header {
-    background: #649213 url('../../assets/noise.png');
-    div.group {
-      justify-items: center;
-      display: grid;
-      .review-info{
-        display: grid;
-        span{
-          text-align: center;
-        }
-      }
-      .review{
-        text-transform: uppercase;
-        margin-bottom: 5%;
-      }
-    }
-    div.image-container {
-      background: #fff;
-      margin-bottom: 5%;
-      width: 100px;
-      height: 100px;
-      position: relative;
-      overflow: hidden;
-      border-radius: 50%;
-      border: 10px black;
-    }
-    img {
-      display: inline;
-      margin: 10px auto 10px 8%;
-      height: 100%;
-      width: auto;
-    }
-  }
-
-  div.modal-player-body {
-    div.info {
-      display: grid;
-      justify-items: center;
-      padding: 9px 0 9px 0;
-      .title{
-        text-transform: uppercase;
-      }
-      .value{
-        font-size: 12px;
-      }
-    }
-  }
-  span.close-modal{
-    position: absolute;
-    right: -20px;
-    top: -20px;
-
-  }
-}*/
-
 .modal-player {
   display: flex;
   align-items: center;
@@ -121,6 +51,8 @@ div.player-container {
   }
 
   div.modal-player-header {
+    display: grid;
+    align-content: center;
     background: #649213 url('../../assets/noise.png');
     div.group {
       justify-items: center;
@@ -133,11 +65,19 @@ div.player-container {
         }
         span.position {
           font-size: 15px;
+          line-height: 2.1;
         }
       }
       .review {
         text-transform: uppercase;
         margin-bottom: 5%;
+      }
+
+      .review,
+      .names,
+      .position{
+        color: #fff;
+        line-height: 1.2;
       }
     }
     div.image-container {

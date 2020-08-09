@@ -18,6 +18,8 @@ const PlayerModal: React.FC = () => {
                         const {player, setOpen, open} = playerContext;
                         const {
                             name,
+                            first_surname,
+                            second_surname,
                             position,
                             birthday,
                             birth_place,
@@ -49,6 +51,8 @@ const PlayerModal: React.FC = () => {
                                                         alt=""/>
                                                 </div>
                                                 <span className="names">{name}</span>
+                                                <span className="names">{first_surname}</span>
+                                                <span className="names">{second_surname}</span>
                                                 <span className="position">{position}</span>
                                             </div>
                                         </div>

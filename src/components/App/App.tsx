@@ -9,33 +9,20 @@ import Navigation from 'components/Navigation';
 import HomePage from 'components/Home';
 import PlayersPage from "components/Players";
 import BookmarksPage from 'components/Bookmarks';
-import SponsorsPage from 'components/Sponsors';
 
 
 import './app.scss';
 
 const useStyle = makeStyles((theme) => ({
-    root: {
-        display: "flex"
-    },
-    appBarSpacer: theme.mixins.toolbar,
-    content: {
-        flexGrow: 1,
-        height: '100vh',
-        overflow: 'auto',
-    },
-    container: {
-        paddingTop: theme.spacing(4),
-        paddingBottom: theme.spacing(4),
-    },
+    appBarSpacer: theme.mixins.toolbar
 }));
 const App: React.FC = () => {
     const classes = useStyle();
     return (
-        <div className={classes.root}>
+        <div>
             <CssBaseline/>
             <Navigation/>
-            <main className={classes.content}>
+            <main className={'content-application'}>
                 <div className={classes.appBarSpacer} />
                 <Switch>
                     <Route
@@ -55,12 +42,6 @@ const App: React.FC = () => {
                         path={'/players'}
                         component={PlayersPage}
                         key={'player'}
-                    />
-                    <Route
-                        exact
-                        path={'/sponsors'}
-                        component={SponsorsPage}
-                        key={'sponsor'}
                     />
                 </Switch>
             </main>

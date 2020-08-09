@@ -52,7 +52,7 @@ const webpackConfig = (): Configuration => ({
     devtool: 'inline-source-map',
     devServer: {
         contentBase: './build',
-        host: '10.0.0.17',
+        host: 'localhost',
         port: 3000,
         hot: true,
         overlay: true,

@@ -54,21 +54,20 @@ const Players = () => {
         <PlayerProvider value={{setOpen: setOpen, player: player, open: open, setPlayer: setPlayer}}>
             <Container disableGutters={true}>
                 <div className="player-container">
-
                     {isLoaded
-                        ? forwards.map((player, key) => <RenderPlayerCard {...player} {...key}/>)
+                        ? forwards.map((player, key) => <RenderPlayerCard {...player} key={`${player.number}${key}`}/>)
                         : <RenderSkeleton/>
                     }
                     {isLoaded
-                        ? centers.map((player, key) => <RenderPlayerCard {...player} {...key}/>)
+                        ? centers.map((player, key) => <RenderPlayerCard {...player} key={`${player.number}${key}`}/>)
                         : <RenderSkeleton/>
                     }
                     {isLoaded
-                        ? defenses.map((player, key) => <RenderPlayerCard {...player} {...key}/>)
+                        ? defenses.map((player, key) => <RenderPlayerCard {...player} key={`${player.number}${key}`}/>)
                         : <RenderSkeleton/>
                     }
                     {isLoaded
-                        ? goalkeepers.map((player, key) => <RenderPlayerCard {...player} {...key}/>)
+                        ? goalkeepers.map((player, key) => <RenderPlayerCard {...player} key={`${player.number}${key}`}/>)
                         : <RenderSkeleton/>
                     }
                 </div>
